@@ -19,4 +19,22 @@ resource "aws_autoscaling_group" "asg" {
     create_before_destroy = true
   }
 }
+resource "aws_autoscaling_schedule" "asg_schedule_stop" {
+  scheduled_action_name  = "asg_stop"
+  min_size               = 0
+  max_size               = 3
+  desired_capacity       = 0
+  recurrence             = var.stop_time
+  autoscaling_group_name = aws_autoscaling_group.asg.id
+}
+resource "aws_autoscaling_schedule" "asg_schedule_start" {
+  scheduled_action_name  = "asg_start"
+  min_size               = 1
+  max_size               = 3
+  desired_capacity       = 1
+  recurrence             = var.start_time
+  autoscaling_group_name = aws_autoscaling_group.asg.id
+}
+
+
 

@@ -38,6 +38,8 @@ module "auto_scaling_group" {
   pem_key       = var.pem_key
   sg_id         = module.security_group.sg_id
   subnet_id     = module.subnet.subnet_id
+  start_time    = var.start_time
+  stop_time     = var.stop_time
 }
 
 

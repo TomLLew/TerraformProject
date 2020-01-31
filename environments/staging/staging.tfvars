@@ -1,0 +1,7 @@
+environment   = "staging"
+region        = "ap-south-1"
+ami_id        = "ami-0123b531fc646552f"
+instance_type = "t2.micro"
+pem_key       = "mumbai-key"
+stop_time     = "30 22 * * MON-FRI"
+start_time    = "30 14 * * MON-FRI"

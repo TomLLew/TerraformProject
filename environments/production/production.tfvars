@@ -1,0 +1,7 @@
+environment   = "production"
+region        = "eu-west-2"
+ami_id        = "ami-0be057a22c63962cb"
+instance_type = "t2.micro"
+pem_key       = "london-key"
+stop_time     = "00 17 * * MON-FRI"
+start_time    = "00 9 * * MON-FRI"
