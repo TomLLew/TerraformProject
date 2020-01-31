@@ -1,0 +1,4 @@
+*developmentplan*
+*.tfstate*
+*.tfstate.backup*
+*.terraform*
